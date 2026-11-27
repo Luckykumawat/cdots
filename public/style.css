@@ -21,7 +21,7 @@ html{scroll-padding-top:165px}.section-nav{position:sticky;top:calc(var(--header
 
 .cdots-logo{width:36px;height:36px;flex-shrink:0;border-radius:10px}.cdots-logo.large{display:block;width:52px;height:52px;margin:0 auto 30px;border-radius:15px}
 
-/* Dot Works: gentle movement, with reduced-motion support. */
+/* Dot Workspace: gentle movement, with reduced-motion support. */
 @media (prefers-reduced-motion: no-preference) {
   .hero-copy { animation: dw-arrive .75s ease-out both; }
   .hero-art { animation: dw-arrive .9s .12s ease-out both; }

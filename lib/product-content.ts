@@ -5,7 +5,7 @@ export function slugify(name:string){return name.toLowerCase().normalize('NFKD')
 export function enrichEntry<T extends {id:string;name:string;kind:string;description:string;details?:string;tagline?:string;slug?:string;page?:ProductPage}>(p:T):T&{slug:string;page:ProductPage}{
  const profile=(profiles as Record<string,{slug:string;page:ProductPage}>)[p.id];
  const fallback:ProductPage=p.kind==='website'?{
- headline:`${p.name}, brought to the web.`,audience:`Explore ${p.name}, a website project from the Dot Works collection.`,
+ headline:`${p.name}, brought to the web.`,audience:`Explore ${p.name}, a website project from the Dot Workspace collection.`,
  benefits:[{title:'A project with a clear purpose',body:p.description},{title:'Explore the experience',body:'Visit the linked website or project reference to see the design and experience in context.'}],
  useCases:[{title:'Explore this project',body:p.details||p.description},{title:'Plan a similar project',body:'If you are thinking about a website for your own business, contact Lokesh to discuss your goals and requirements.'}],
  steps:[{title:'Understand the project',body:'Read the overview and browse any available project images.'},{title:'Explore the website',body:'Use Visit website to open the linked website or project reference.'},{title:'Discuss your own idea',body:'Contact Lokesh if you would like to discuss a similar website or digital experience.'}],
