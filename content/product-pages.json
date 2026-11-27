@@ -1,0 +1,474 @@
+{
+  "product-1": {
+    "slug": "drivepool",
+    "page": {
+      "headline": "Many drives. One clear space.",
+      "audience": "For people managing files across more than one personal Google Drive account.",
+      "benefits": [
+        {
+          "title": "See the space you already have",
+          "body": "View combined available storage and free space in each connected account, without checking every Drive separately."
+        },
+        {
+          "title": "Take the guesswork out of uploads",
+          "body": "Drivepool chooses the connected account with the most free space that can fit the whole file."
+        },
+        {
+          "title": "Keep your uploads together",
+          "body": "Browse and download the files you uploaded through Drivepool from one workspace."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "Multiple personal accounts",
+          "body": "Get a clearer picture of available storage across your connected Google accounts."
+        },
+        {
+          "title": "Everyday file uploads",
+          "body": "Let the app select an account with enough space, then see where the upload was placed."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Connect your first Drive",
+          "body": "Sign in with Google to open your workspace."
+        },
+        {
+          "title": "Add your other accounts",
+          "body": "Connect additional personal Google Drive accounts and review available space."
+        },
+        {
+          "title": "Upload and find your files",
+          "body": "Upload a file, check which account received it, and download it from your workspace."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Does Drivepool create extra storage?",
+          "body": "No. It shows the available space in your connected accounts; it does not increase their storage limits."
+        },
+        {
+          "title": "Can a single file span multiple Drives?",
+          "body": "No. Each file stays together in one account and must fit in that account’s available space."
+        },
+        {
+          "title": "Does it show every existing file in my Drives?",
+          "body": "Drivepool lists files uploaded through the app. It is not a complete view of every pre-existing file in all accounts."
+        }
+      ]
+    }
+  },
+  "product-2": {
+    "slug": "dobal",
+    "page": {
+      "headline": "A focused place to think things through.",
+      "audience": "For people looking for an AI conversation workspace with notes and a PDF attachment option.",
+      "benefits": [
+        {
+          "title": "Start with a conversation",
+          "body": "Bring your question or task into a focused AI chat interface."
+        },
+        {
+          "title": "Keep notes nearby",
+          "body": "Open Notes alongside your conversations, so useful context has a place to live."
+        },
+        {
+          "title": "Bring a PDF into the workflow",
+          "body": "Use the PDF attachment option from the chat interface when working with a document."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "Exploring an idea",
+          "body": "Use a conversation to work through a question, an outline or a piece of writing."
+        },
+        {
+          "title": "Working with written material",
+          "body": "Keep a chat, your notes and document attachment workflow in one interface."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Open Dobal",
+          "body": "Visit the app and start a new chat."
+        },
+        {
+          "title": "Add your context",
+          "body": "Enter your question or attach a PDF through the available control."
+        },
+        {
+          "title": "Continue your work",
+          "body": "Review the response, ask follow-up questions and use Notes as needed."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "What is Dobal?",
+          "body": "Dobal is an AI assistant with a chat interface, recent conversations, Notes and a PDF attachment option."
+        },
+        {
+          "title": "Where do I use it?",
+          "body": "Select Open Dobal to go to its own website. Product availability and any access requirements are managed there."
+        },
+        {
+          "title": "Is every AI response guaranteed to be correct?",
+          "body": "No. Review AI-generated answers and verify information before relying on it for an important decision."
+        }
+      ]
+    }
+  },
+  "product-3": {
+    "slug": "gather",
+    "page": {
+      "headline": "Bring your people together. Leave the counting to Gather.",
+      "audience": "For wedding hosts planning invitations, family RSVPs and attendance counts.",
+      "benefits": [
+        {
+          "title": "One invitation for each family",
+          "body": "Create invitations and share a private response link with each family."
+        },
+        {
+          "title": "Replies in one place",
+          "body": "See family responses update in the host dashboard instead of piecing together separate messages."
+        },
+        {
+          "title": "Plan with clearer counts",
+          "body": "Turn replies into attendance and catering counts to help with wedding preparations."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "Collecting wedding RSVPs",
+          "body": "Give each family a private link and a clear way to reply."
+        },
+        {
+          "title": "Preparing for your guests",
+          "body": "Use the responses to understand attendance and catering needs."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Set up your invitations",
+          "body": "Create the invitation and add your guest families."
+        },
+        {
+          "title": "Share the family links",
+          "body": "Manually send each family its private link through WhatsApp."
+        },
+        {
+          "title": "Follow the responses",
+          "body": "Review replies and use attendance counts to support your planning."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Does Gather automatically send WhatsApp messages?",
+          "body": "The described workflow is manual sharing: hosts send each family’s private invitation link through WhatsApp."
+        },
+        {
+          "title": "Who is Gather useful for?",
+          "body": "Wedding hosts who want family invitations, replies and useful attendance counts in one place."
+        },
+        {
+          "title": "Where do I access my invitation or dashboard?",
+          "body": "Open Gather to use the app. Hosts and guests follow the access flow provided there."
+        }
+      ]
+    }
+  },
+  "product-4": {
+    "slug": "evolve",
+    "page": {
+      "headline": "Make progress on the life you want to build.",
+      "audience": "For people who want to plan personal goals, build habits and reflect on their progress.",
+      "benefits": [
+        {
+          "title": "Give your goals a home",
+          "body": "Organise personal goals and see them alongside your wider growth journey."
+        },
+        {
+          "title": "Make everyday habits visible",
+          "body": "Track daily habits so you can reflect on consistency over time."
+        },
+        {
+          "title": "Keep your motivation in view",
+          "body": "Use vision boards and a gratitude journal to connect planning with reflection."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "Planning personal goals",
+          "body": "Bring the things you want to work toward into a dedicated space."
+        },
+        {
+          "title": "Building a reflective routine",
+          "body": "Combine habit tracking with gratitude journaling and progress dashboards."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Open your workspace",
+          "body": "Visit Evolve and follow its account-access process."
+        },
+        {
+          "title": "Set your direction",
+          "body": "Add goals, habits and vision-board content that matter to you."
+        },
+        {
+          "title": "Return and reflect",
+          "body": "Track your daily habits and review your progress over time."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "What can I organise in Evolve?",
+          "body": "The app brings together personal goals, daily habits, vision boards, gratitude journaling and progress dashboards."
+        },
+        {
+          "title": "Does opening this page create an Evolve account?",
+          "body": "No. This is the product introduction page. Open Evolve to follow the app’s account and access process."
+        },
+        {
+          "title": "Who manages app access?",
+          "body": "The app includes administration for user accounts, approvals and access permissions."
+        }
+      ]
+    }
+  },
+  "product-5": {
+    "slug": "nexus",
+    "page": {
+      "headline": "Bring the day’s work into one clearer view.",
+      "audience": "For manufacturing and export businesses coordinating tasks, production reports and approvals.",
+      "benefits": [
+        {
+          "title": "Reduce scattered follow-ups",
+          "body": "Bring operational work that lives across spreadsheets and messages into one role-based platform."
+        },
+        {
+          "title": "Help employees focus",
+          "body": "Employees can see the work assigned to them, with access shaped around their role."
+        },
+        {
+          "title": "Give management visibility",
+          "body": "Production reports, follow-ups and approvals provide a clearer operational picture."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "Manufacturing operations",
+          "body": "Coordinate production reporting and day-to-day task follow-ups."
+        },
+        {
+          "title": "Team approvals",
+          "body": "Organise approval workflows within a business-specific management system."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Discuss the workflow",
+          "body": "Contact Lokesh to explain your operations and access requirements."
+        },
+        {
+          "title": "Define the business setup",
+          "body": "Review the roles, reports, tasks and approvals that your team needs."
+        },
+        {
+          "title": "Use your configured workspace",
+          "body": "Follow the agreed access process for your business-specific platform."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Is Nexus a public self-service app?",
+          "body": "The portfolio describes a business-specific ERP and operations platform. Contact Lokesh to discuss access or a similar solution."
+        },
+        {
+          "title": "Which businesses is it designed for?",
+          "body": "Its described focus is manufacturing and export businesses."
+        },
+        {
+          "title": "Can we discuss software for our own process?",
+          "body": "Yes. Use Ask about access to explain your requirements and discuss a suitable solution."
+        }
+      ]
+    }
+  },
+  "product-6": {
+    "slug": "label-sorter",
+    "page": {
+      "headline": "Turn a messy label batch into a clearer print run.",
+      "audience": "For marketplace sellers and fulfilment teams working with multi-page shipping label PDFs.",
+      "benefits": [
+        {
+          "title": "Group by courier",
+          "body": "Detect courier partners and bring their labels together in the output."
+        },
+        {
+          "title": "Sort within each group",
+          "body": "Organise labels by SKU within courier groups to make the batch easier to work through."
+        },
+        {
+          "title": "Keep processing in your browser",
+          "body": "The described tool processes files locally in the browser rather than uploading them to a server."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "Preparing shipping batches",
+          "body": "Organise a mixed multi-page label PDF before printing."
+        },
+        {
+          "title": "Working through marketplace orders",
+          "body": "Use courier grouping and SKU ordering to make label batches easier to navigate."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Open Label Sorter",
+          "body": "Visit the tool and select your shipping label PDF."
+        },
+        {
+          "title": "Process the batch",
+          "body": "Use its controls to crop margins and organise labels by courier and SKU."
+        },
+        {
+          "title": "Download the result",
+          "body": "Review the processed labels and download the print-ready output."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Are my label PDFs uploaded?",
+          "body": "The portfolio describes local browser processing, with no files uploaded."
+        },
+        {
+          "title": "What does the tool organise?",
+          "body": "It crops blank label margins, detects couriers and sorts labels by SKU within courier groups."
+        },
+        {
+          "title": "Should I check the output before printing?",
+          "body": "Yes. Review your processed batch to confirm that the grouping and label content match your needs."
+        }
+      ]
+    }
+  },
+  "product-7": {
+    "slug": "listing-studio",
+    "page": {
+      "headline": "Prepare product listing workbooks with less repetition.",
+      "audience": "For users preparing marketplace listing spreadsheets from an existing Excel template and product images.",
+      "benefits": [
+        {
+          "title": "Work from your own template",
+          "body": "Start with an original Excel workbook and map the supported fields."
+        },
+        {
+          "title": "Prepare a focused image set",
+          "body": "Filter local product images to a mobile model and upload them to Cloudinary within the workflow."
+        },
+        {
+          "title": "Export a real workbook",
+          "body": "Customise the title and account ID, then download an XLSX listing workbook."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "Repeated marketplace listings",
+          "body": "Reduce repeated workbook preparation when creating similar product listings."
+        },
+        {
+          "title": "Template-based catalogue work",
+          "body": "Keep the workflow tied to the listing template you already use."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Choose your template",
+          "body": "Upload the original Excel template and map the five supported fields."
+        },
+        {
+          "title": "Prepare the listing data",
+          "body": "Customise the title and account ID, then select the relevant images."
+        },
+        {
+          "title": "Export your workbook",
+          "body": "Complete the image workflow and download the generated XLSX file."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Is Listing Studio public?",
+          "body": "The portfolio describes a private listing-workbook generator. Its own website may restrict access."
+        },
+        {
+          "title": "Where are images uploaded?",
+          "body": "The described workflow uploads selected images to Cloudinary."
+        },
+        {
+          "title": "What file do I get?",
+          "body": "The tool produces a real XLSX workbook based on the supplied template and selected data."
+        }
+      ]
+    }
+  },
+  "product-8": {
+    "slug": "b2b-product-platform",
+    "page": {
+      "headline": "A clearer path from product data to buyer conversations.",
+      "audience": "A project in development for manufacturers and suppliers managing catalogues and buyer information.",
+      "benefits": [
+        {
+          "title": "A more organised catalogue",
+          "body": "The planned platform brings product data into a central catalogue workflow."
+        },
+        {
+          "title": "Less repeated document work",
+          "body": "Planned exports include presentations, PDFs and Excel documents created from product information."
+        },
+        {
+          "title": "Simpler buyer communication",
+          "body": "The planned experience supports sharing products and handling quotation requests."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "Manufacturer catalogues",
+          "body": "A planned workspace for keeping product information organised for buyer discussions."
+        },
+        {
+          "title": "Sales document preparation",
+          "body": "A planned way to reduce repeated work across presentations, PDFs and spreadsheets."
+        }
+      ],
+      "steps": [
+        {
+          "title": "Share your requirements",
+          "body": "Contact Lokesh to discuss your catalogue and buyer workflows."
+        },
+        {
+          "title": "Review the project direction",
+          "body": "Explore how the platform being developed could support those needs."
+        },
+        {
+          "title": "Ask about availability",
+          "body": "Get the current development and access details before planning adoption."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Can I use the platform today?",
+          "body": "The portfolio lists this project as in development. Enquire about the project for its current availability."
+        },
+        {
+          "title": "Are the features on this page already released?",
+          "body": "The catalogue, document generation and quotation workflows described here are planned capabilities."
+        },
+        {
+          "title": "Who is it intended for?",
+          "body": "Manufacturers and suppliers who manage product catalogues and communicate with buyers."
+        }
+      ]
+    }
+  }
+}

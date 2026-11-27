@@ -1,0 +1,25 @@
+import { env } from 'cloudflare:workers';
+import defaults from '../content/seed-catalog.json';
+import {enrichEntry, type ProductPage} from './product-content';
+export type Entry={slug?:string;page?:ProductPage;id:string;name:string;kind:string;category:string;tagline:string;description:string;details:string;menuDescription:string;iconImage:string;image?:string;gallery?:string[];url?:string;github?:string;status?:string;published:boolean;sortOrder:number};
+export function database(){if(!env.DB)throw new Error('Database is unavailable.');return env.DB}
+export function json(data:unknown,status=200){return Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}})}
+export async function readCatalog(){const row=await database().prepare('SELECT data, revision, updated_at FROM catalog_state WHERE id = ?').bind('catalog').first<{data:string;revision:number;updated_at:string}>();return row?{items:(JSON.parse(row.data) as Entry[]).map(enrichEntry),revision:row.revision,updatedAt:row.updated_at}:{items:(defaults as Entry[]).map(enrichEntry),revision:0,updatedAt:null}}
+const OWNER_EMAIL='ravi@laxmiexport.com';
+export async function requireAdmin(request:Request){
+ const id=request.headers.get('oai-authenticated-user-id');const email=request.headers.get('oai-authenticated-user-email');
+ if(!id||!email)throw new Response('Sign in required',{status:401});
+ // The preview identity exists only in the local development server.
+ if(process.env.NODE_ENV==='development'&&id==='local_seedy'&&email==='seedy@sites.test')return {id,email};
+ const found=await database().prepare('SELECT user_id FROM admin_principals WHERE user_id = ?').bind(id).first();
+ if(found)return {id,email};
+ const count=await database().prepare('SELECT COUNT(*) AS total FROM admin_principals').first<{total:number}>();
+ if(!count?.total&&email.toLowerCase()===OWNER_EMAIL){await database().prepare('INSERT OR IGNORE INTO admin_principals (user_id,created_at) VALUES (?,?)').bind(id,new Date().toISOString()).run();return {id,email}}
+ throw new Response('This admin panel is reserved for the website owner.',{status:403});
+}
+export function requireSameOrigin(request:Request){const origin=request.headers.get('origin');if(!origin||origin!==new URL(request.url).origin)throw new Response('Invalid request origin',{status:403})}
+function text(v:unknown,max:number,required=false){if(v===undefined||v===null){if(required)throw new Error('A required field is missing.');return ''}if(typeof v!=='string'||v.length>max||(required&&!v.trim()))throw new Error('A text field is missing or too long.');return v.trim()}
+function url(v:unknown,asset=false){const s=text(v,2048);if(!s)return '';if(asset&&(s.startsWith('/media/')||s.startsWith('/assets/')||s.startsWith('assets/'))){if(s.includes('..')||/[<>"'\\]/.test(s))throw new Error('Invalid image path.');return s}let u;try{u=new URL(s)}catch{throw new Error('Enter a complete https:// link.')}if(!['https:','http:'].includes(u.protocol)||u.username||u.password)throw new Error('Use an https:// or http:// link.');return u.href}
+export function validateItems(input:unknown):Entry[]{if(!Array.isArray(input)||input.length>1000)throw new Error('The catalogue supports up to 1,000 entries.');const ids=new Set<string>();const slugs=new Set<string>();return input.map((p:any,i)=>{const id=text(p.id,100,true);if(!/^[a-zA-Z0-9_-]+$/.test(id)||ids.has(id))throw new Error('Invalid or duplicate entry ID.');ids.add(id);const enriched=enrichEntry(p);const slug=text(enriched.slug,100,true);if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)||slugs.has(slug))throw new Error('Use a unique entry page address with lowercase letters, numbers and hyphens.');slugs.add(slug);if(!['app','website','software'].includes(p.kind))throw new Error('Choose a valid product type.');if(!['Productivity','Business','Lifestyle'].includes(p.category))throw new Error('Choose a valid category.');if(p.gallery!==undefined&&(!Array.isArray(p.gallery)||p.gallery.length>12))throw new Error('Use up to 12 gallery images.');return {id,slug,page:validatePage(enriched.page),name:text(p.name,100,true),kind:p.kind,category:p.category,tagline:text(p.tagline,180),description:text(p.description,1500,true),details:text(p.details,8000),menuDescription:text(p.menuDescription,150),iconImage:url(p.iconImage,true)||'assets/default-product.svg',image:url(p.image,true),gallery:(p.gallery||[]).map((x:unknown)=>url(x,true)).filter(Boolean),url:url(p.url),github:url(p.github),status:text(p.status,60),published:p.published===true,sortOrder:Number.isFinite(p.sortOrder)?Math.max(-10000,Math.min(10000,Math.floor(p.sortOrder))):i}})}
+
+function validatePage(page:ProductPage):ProductPage{function blocks(value:unknown){if(!Array.isArray(value)||value.length>12)throw new Error('Product page fields support up to 12 items per section.');return value.map((b:any)=>({title:text(b?.title,180,true),body:text(b?.body,2400,true)}))}return {headline:text(page.headline,220),audience:text(page.audience,800),benefits:blocks(page.benefits),useCases:blocks(page.useCases),steps:blocks(page.steps),faqs:blocks(page.faqs)}}
