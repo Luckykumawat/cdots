@@ -36,3 +36,5 @@ html{scroll-padding-top:165px}.section-nav{position:sticky;top:calc(var(--header
 @keyframes dw-float { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-10px) rotate(1deg); } }
 
 .wordmark-dot{color:#202124;font-weight:600}.brand .wordmark-workspace,.admin-brand .wordmark-workspace,.mobile-brand .wordmark-workspace{color:#80868b;font-weight:400;font-style:normal}
+
+.workspace-logo{display:block;width:48px;height:26px;object-fit:contain;flex-shrink:0}

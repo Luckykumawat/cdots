@@ -1,5 +1,3 @@
 # Dot Workspace branding
 
-Current wordmark: dark “Dot” and light grey “Workspace”, preceded by four blue, red, yellow and green squares as requested in the header screenshot.
-
-Future logo reference: dotted infinity symbol in dot-works-logo-reference.png, using multiple colors inspired by Google icons. Do not apply the reference as a live logo until requested.
+Dark “Dot”, light grey “Workspace”. Use the supplied dotted infinity silhouette before the name, in blue, red, yellow and green. The SVG preserves the supplied image silhouette using a mask; do not use the four-square icon.
