@@ -20,3 +20,17 @@
 html{scroll-padding-top:165px}.section-nav{position:sticky;top:calc(var(--header-height,76px) + 12px);z-index:27;background:#fff;box-shadow:0 2px 6px #20212416}.section-nav a[aria-current="location"]{color:#1967d2;background:#e8f0fe}.card-actions .learn-product{color:#5f6368;font-weight:400}.card-actions .learn-product:hover{color:#1967d2}.page-section-nav{max-width:610px}.page-section-nav a{padding-left:26px;padding-right:26px}@media(max-width:520px){html{scroll-padding-top:150px}.section-nav{top:calc(var(--header-height,68px) + 8px)}.page-section-nav a{font-size:12px;padding-left:16px;padding-right:16px}}
 
 .cdots-logo{width:36px;height:36px;flex-shrink:0;border-radius:10px}.cdots-logo.large{display:block;width:52px;height:52px;margin:0 auto 30px;border-radius:15px}
+
+/* Dot Works: gentle movement, with reduced-motion support. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy { animation: dw-arrive .75s ease-out both; }
+  .hero-art { animation: dw-arrive .9s .12s ease-out both; }
+  .dobal-float { animation: dw-float 7s ease-in-out infinite; }
+  .gather-float { animation: dw-float 8s -3s ease-in-out infinite reverse; }
+  .product-card,.work-card { transition: transform .25s ease, box-shadow .25s ease; }
+  .product-card:hover,.work-card:hover { transform: translateY(-5px); box-shadow: 0 14px 32px #20212412; }
+  .dw-reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+  .dw-reveal.dw-visible { opacity: 1; transform: none; }
+}
+@keyframes dw-arrive { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes dw-float { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-10px) rotate(1deg); } }
