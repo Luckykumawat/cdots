@@ -1,4 +1,7 @@
-import {requireAdmin,requireSameOrigin,readCatalog,json,database,validateItems} from '../../../../lib/catalog';
+import {requireSameOrigin,readCatalog,json,validateItems} from '../../../../lib/catalog';
+import {requireAdmin} from '../../../../lib/admin-auth';
+import {database} from '../../../../lib/database';
+
 export async function GET(request:Request){try{await requireAdmin(request);return json(await readCatalog())}catch(e){if(e instanceof Response)return e;return json({error:'Could not load the catalogue.'},503)}}
 export async function PUT(request:Request){try{requireSameOrigin(request);await requireAdmin(request);if(Number(request.headers.get('content-length'))>1500000)return json({error:'Catalogue is too large.'},413);const raw=await request.text();if(raw.length>1500000)return json({error:'Catalogue is too large.'},413);const body=JSON.parse(raw);const items=validateItems(body.items);if(!Number.isInteger(body.revision)||body.revision<0)return json({error:'Invalid catalogue revision.'},400);const now=new Date().toISOString();const data=JSON.stringify(items);let result;
 if(body.revision===0){result=await database().prepare('INSERT OR IGNORE INTO catalog_state (id,data,revision,updated_at) VALUES (?,?,?,?)').bind('catalog',data,1,now).run()}

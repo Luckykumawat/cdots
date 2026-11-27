@@ -1,0 +1,5 @@
+export function database() {
+ const account=process.env.CLOUDFLARE_ACCOUNT_ID,id=process.env.CLOUDFLARE_D1_DATABASE_ID,token=process.env.CLOUDFLARE_API_TOKEN;
+ if(!account||!id||!token)throw new Error('Database is not configured.');
+ return {prepare(sql:string){function statement(params:unknown[]=[]){async function execute(){const r=await fetch(`https://api.cloudflare.com/client/v4/accounts/${encodeURIComponent(account!)}/d1/database/${encodeURIComponent(id!)}/query`,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify({sql,params}),cache:'no-store',signal:AbortSignal.timeout(15000)});const data=await r.json();if(!r.ok||!data.success||!data.result?.[0]?.success)throw new Error('Database request failed.');return data.result[0]};return {bind:(...values:unknown[])=>statement(values),first:async<T=Record<string,unknown>>()=>(await execute()).results?.[0] as T|undefined,run:async()=>await execute() as {meta:{changes:number}}}}return statement()}};
+}
